@@ -1,0 +1,629 @@
+body {
+
+	font-family: Helvetica, Arial, sans-serif;
+
+	margin:0;
+
+	padding:0;
+
+	background-image:url(../images/background.jpg);
+
+	background-position:center center;
+
+	background-attachment:fixed;	
+
+}
+
+
+
+#content {
+
+	width:auto;
+
+	padding:10px 10px 70px;
+
+	color:#FFF;	
+
+}
+
+
+
+#contentWithTopMenu {
+
+	width:auto;
+
+	padding:25px 10px 70px;
+
+	color:#FFF;	
+
+}
+
+
+
+#content h1 {
+
+	margin-top:0;
+
+	padding-top:0;	
+
+	font-weight:400;
+
+}
+
+
+
+.contentRow {
+
+	display:block;
+
+	padding:0;
+
+	border-bottom:1px solid rgba(255,255,255,0.5);
+
+	clear:both;	
+
+	padding:10px;
+
+}
+
+
+
+.contentRow div {
+
+	display:block;
+
+	float:left;	
+
+}
+
+
+
+.contentRow div h3 {
+
+	padding:0;
+
+	margin:0;	
+
+}
+
+
+
+.contentRow img {
+
+	height:50px;
+
+	width:auto;
+
+	display:block;
+
+	margin-right:10px;
+
+	float:left;	
+
+}
+
+
+
+.redPrice {
+
+	font-size:1.25em;
+
+	padding-right:10px;
+
+	display:block;
+
+	float:left;
+
+	padding-top:3px;	
+
+}
+
+
+
+.listLable {
+
+	width:120px;
+
+	display: inline-block;
+
+}
+
+
+
+.metaPrice span {
+
+	display:block;	
+
+}
+
+
+
+.percent, .whitePrice {
+
+	font-size:0.75em;	
+
+}
+
+
+
+.whitePrice {
+
+	text-decoration:line-through;	
+
+}
+
+
+
+/**Top Menu**/
+
+#topMenu {
+
+	position:fixed;
+
+	top:0;
+
+	left:0;
+
+	padding:10px;
+
+	background-color:rgba(255,255,255,0.8);
+
+	width:100%;	
+
+	color:#09F;
+
+}
+
+
+
+#backArrow {
+
+	border-top:2px solid #09F;
+
+	border-left:2px solid #09F;
+
+	width:20px;
+
+	height:20px;
+
+	-moz-transform: rotate(-45deg);
+
+	-ms-transform: rotate(-45deg);
+
+	-o-transform: rotate(-45deg);
+
+	-webkit-transform: rotate(-45deg);	
+
+	display:inline-block;
+
+	margin-bottom:-5px;
+
+}
+
+
+
+.topMenuLink {
+
+	color:#09F;
+
+	text-decoration:none;
+
+}
+
+
+
+.topMenuHl {
+
+	text-align:center;
+
+	display:block;
+
+	margin-top:-20px;
+
+	font-size:18px;	
+
+}
+
+
+
+/**Navigation**/
+
+#navigation {
+
+	position:fixed;
+
+	width:100%;
+
+	background-color:rgba(255,255,255,0.85);
+
+	bottom:0;
+
+	left:0;
+
+	display:block;
+
+	padding:0;
+
+	margin:0;
+
+	text-align:center;
+
+	z-index:100;	
+
+}
+
+
+
+.icon {
+
+	min-width:17%;
+
+	padding:0;
+
+	position:relative;
+
+	color:#000;
+
+	text-decoration:none;
+
+	font-size:12px;
+
+	display:inline-block;
+
+	margin:0;	
+
+}
+
+
+
+.icon:before {
+
+	content: "";
+
+	display:block;
+
+	padding-top:60%;
+
+	background-position:center center;
+
+	background-repeat:no-repeat;
+
+	background-size:auto 100%;	
+
+}
+
+
+
+#sales:before {
+
+	background-image:url(../images/sale.svg);	
+
+}
+
+
+
+#list:before {
+
+	background-image:url(../images/list.svg);	
+
+}
+
+
+
+#auftrag:before {
+
+	background-image:url(../images/shop.svg);	
+
+}
+
+
+
+#bbq:before {
+
+	background-image:url(../images/bbq.svg);	
+
+}
+
+
+
+#more:before {
+
+	background-image:url(../images/more.svg);	
+
+}
+
+
+
+#moreActive {
+
+	color:#3CF;
+
+}
+
+
+
+#moreActive:before {
+
+	background-image:url(../images/more_active.svg);	
+
+}
+
+
+
+/**Inhals Klassen und IDs**/
+
+#logo {
+
+	background-image:url(../images/logo.svg);
+
+	background-repeat:no-repeat;
+
+	background-size:100% auto;
+
+	background-position:center center;
+
+	width:40%;
+
+	height:80%;
+
+	position:absolute;
+
+	left:30%;
+
+	top:0;
+
+	display:block; 	
+
+}
+
+
+
+/**Diverse Links**/
+
+.moreLink {
+
+	display:block;
+
+	width:auto;
+
+	padding:10px 0;
+
+	border-bottom:2px solid #FFF;
+
+	color:#FFF;
+
+	text-decoration:none;
+
+	font-size:18px;	
+
+}
+
+
+
+@media only screen and (max-width:400px) {
+
+	#list:before {
+
+		background-position:center 8px;
+
+		background-size: 50% auto;	
+
+	}
+
+}
+
+
+
+@media only screen and (min-width:601px) {
+
+	#navigation {
+
+		max-height: 60px;	
+
+	}
+
+	
+
+	.icon {
+
+		height:20px;
+
+		padding-top:30px;
+
+		min-width:none;
+
+		width:auto;
+
+		background-position: center top;
+
+		background-size: auto 50%;
+
+		background-repeat:no-repeat;
+
+		margin-top:10px;	
+
+	}
+
+	
+
+	.icon:before {
+
+		padding-top: 0;	
+
+	}
+
+	
+
+	#sales {
+
+		background-image:url(../images/sale.svg);	
+
+	}
+
+	
+
+	#list {
+
+		background-image:url(../images/list.svg);	
+
+	}
+
+	
+
+	#auftrag {
+
+		background-image:url(../images/shop.svg);	
+
+	}
+
+	
+
+	#bbq {
+
+		background-image:url(../images/bbq.svg);	
+
+	}
+
+	
+
+	#more {
+
+		background-image:url(../images/more.svg);	
+
+	}
+
+	
+
+	#moreActive {
+
+		color:#3CF;
+
+		background-image:url(../images/more_active.svg);	
+
+	}
+
+}
+
+
+
+/**BBQ Weather**/
+
+#bbqBigField {
+
+	width: 50%;
+
+	margin: 0 auto;
+
+	background-image: url("../images/bbqWeather/bbq.svg");
+
+	background-position: center center;
+
+	background-repeat: no-repeat;
+
+	background-size: 100% auto;
+
+}
+
+
+
+#bbqBigField:before{
+
+	content: "";
+
+	display: block;
+
+	padding-top: 100%;
+
+}
+
+
+
+.bbqGood:after, .bbqBad:after {
+
+	font-size: 50px;
+
+	margin-top: -60px;
+
+	margin-right: 17.5%;
+
+	display: block;
+
+	float: right;
+
+}
+
+
+
+.bbqGood:after {
+
+	content: "✓";
+
+	color: #27ae60;
+
+}
+
+
+
+.bbqBad:after {
+
+	content: "✗";
+
+	color: #c0392b;
+
+}
+
+
+
+#weatherLocation {
+
+	font-size: 3em;
+
+	padding:10px;
+
+}
+
+
+
+#weatherIcon {
+
+	font-size: 5em;
+
+	padding: 20px;
+
+}
+
+
+
+#weatherTemperatur {
+
+	font-size: 1.5em;
+
+	padding:10px;
+
+}
+
+
+
+
+
+.weatherCenter {
+
+	text-align: center;
+
+}
+
+
+
+#map {
+
+	width: 100%;
+
+	height: 100%;
+
+	position: fixed;
+
+	top: 0;
+
+	left: 0;
+
+}

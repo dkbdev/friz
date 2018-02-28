@@ -1,0 +1,19 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <metadata transform="matrix(0.017777779632144552,0,0,0.017777779632144552,0,0) " id="svg_11">image/svg+xml</metadata>
+
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="47" id="svg_16" y="249" x="99.78125" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Auftragserfassung</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="43" id="svg_17" y="297.099888" x="91.632813" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Frizzante Erzeugung</text>
+  <path id="svg_18" d="m575.165751,125.371355c-0.085084,-38.712397 -38.117753,-70.078556 -85.063,-70.131154l0,-0.017533l-260.719477,0c-10.741889,-28.438183 -42.776117,-49.23207 -80.936413,-49.284668l-61.15432,0c-46.966518,0.035066 -85.020458,31.418757 -85.105542,70.131154l0,248.755203c0.085084,38.677331 38.139024,70.04349 85.105542,70.113621l402.83148,0c46.902704,-0.070131 84.977916,-31.43629 85.063,-70.113621l0,-199.453002l-0.021271,0zm-487.873209,-84.385311l61.15432,0c22.249537,-0.070131 40.776637,14.622346 42.180527,32.891511l1.233722,16.428223l298.262912,0c23.249277,0.035066 42.478322,15.884706 42.520864,35.065577l0,8.67873c-12.571201,-6.048812 -26.971714,-9.765763 -42.542135,-9.783296l-402.83148,0c-15.570422,0.017533 -29.992205,3.752017 -42.542135,9.800829l0,-58.015997c0.063813,-19.180871 19.292858,-35.030511 42.563407,-35.065577zm402.810209,318.886357l-402.810209,0c-23.249277,-0.035066 -42.478322,-15.919772 -42.563407,-35.065577l0,-130.408881l0.021271,0c0.042542,-19.198403 19.271587,-35.048044 42.542135,-35.08311l402.83148,0c23.249277,0.035066 42.350696,15.797042 42.542135,34.907782l0,130.566676c-0.085084,19.198403 -19.314129,35.048044 -42.563407,35.08311z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+ </g>
+</svg>

@@ -1,0 +1,178 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+<title>Frizzante-Auftrag Webapp</title>
+
+<link rel="stylesheet" href="styles/style.css" type="text/css"/>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+	function saveData() {
+
+		localStorage.setItem(document.forms[0]["KundenName"].value, document.forms[0]["eDatum"].value);
+
+		readData();
+
+	}
+
+
+
+	function readData() {
+
+		var content = "";
+
+		for(var key in localStorage) {
+
+			content += "<div class=\"listEntry\"><span class=\"KundenName\">"; 
+
+	  		content += key; 
+
+	  		content += "</span><span class=\"eDatum\">"; 
+
+	  		content += localStorage.getItem(key) + "</span>";
+
+	  		content += "<a href=\"#\" removeKey=\"" + key + "\" class=\"deleteLink\">Löschen</a>"
+
+	  		content += "<a href=\"#\" updateKey=\"" + key + "\" class=\"updateLink\">Ändern</a>"
+
+	  		content += "</div>";
+
+		}
+
+		$("#myList").html(content);
+
+	}
+
+
+
+	function removeData(key) {
+
+		localStorage.removeItem(key);
+
+		readData();
+
+	}
+
+
+
+	function updateData(key) {
+
+		document.forms[0]["KundenName"].value = key;
+
+		document.forms[0]["eDatum"].value = localStorage.getItem(key);
+
+	}
+
+
+
+	$(document).ready(function(){
+
+		readData();
+
+		$('.deleteLink').click(function(){
+
+			removeData($(this).attr("removeKey"));
+
+			readData()
+
+		});
+
+		$('.updateLink').click(function(){
+
+			updateData($(this).attr("updateKey"));
+
+			readData()
+
+		});
+
+	});
+
+
+
+</script>
+
+</head>
+
+
+
+<body>
+
+<div id="content">
+
+	<h1>Neuer Auftrag</h1>
+		
+	<form onsubmit="saveData(); return false;">
+		<h2>Kundeninfo</h2>
+		<p><lable for="KundenName" class="listLable">Kunde:</lable><input type="text" id="idKundenName" name="KundenName"/></p>
+		<p><lable for="eDatum" class="listLable">Datum:</lable><input type="date" id="ideDatum" name="eDatum"/></p>
+		<h2>Grundwein</h2>
+		<p><label for="GrundweinW" class="listLable">weiss:</label><input type="radio" id="idGrundweinW" name="Grundwein"/></p>
+		<p><label for="GrundweinR" class="listLable">rot:</label><input type="radio" id="idGrundweinR" name="Grundwein"/></p>
+		<p><label for="GrundweinE" class="listLable">rosé:</label><input type="radio" id="idGrundweinE" name="Grundwein"/></p>
+		<p><label for="GrundweinSI" class="listLable">sonstiges:</label><input type="text" id="idGrundweinSI" name="Grundwein"/></p>
+		<h2>Menge</h2>
+		<p><lable for="Liter" class="listLable">Liter:</lable><input type="text" id="idLiter" name="Liter"/></p>
+		<p><lable for="VRestzucker" class="listLable">vor. Restzucker:</lable><input type="text" id="idVRestzucker" name="VRestzucker"/></p>
+		<h2>SO2 Gehalt</h2>
+		<p><lable for="SO2" class="listLable">SO2:</lable><input type="text" id="idSO2" name="SO2"/></p>
+		<p><lable for="GRestzucker" class="listLable">gew. Restzucker:</lable><input type="text" id="idGRestzucker" name="GRestzucker"/></p>
+		<h2>Wein stabil?</h2>
+		<p><label for="Stabil" class="listLable">stabil ja:</label><input type="checkbox" id="idStabil" name="Stabil"/></p>
+		<h2>Produkt</h2>
+		<p><label for="Schaumwein" class="listLable">Schaumwein mit zugesetzer Kohlensäure:</label><input type="radio" id="idSchaumwein" name="Produkt"/></p>
+		<p><label for="Perlwein" class="listLable">Perlwein:</label><input type="radio" id="idPerlwein" name="Produkt"/></p>
+		<p><label for="SonstigesP" class="listLable">Sonstiges:</label><input type="text" id="idSonstigesP" name="Produkt"/></p>
+		<h2>Flaschenform</h2>
+		<p><label for="Sektfl30" class="listLable">Sektfl. BVS 30/60:</label><input type="radio" id="idSektfl30" name="Flaschenform"/></p>
+		<p><label for="Sektfl30A" class="listLable">Sektfl. antik BVS 30/60:</label><input type="radio" id="idSektfl30A" name="Flaschenform"/></p>
+		<p><label for="Eigene" class="listLable">Eigene:</label><input type="radio" id="idEigene" name="Flaschenform"/></p>
+		<p><label for="SonstigesFC" class="listLable">Sonstiges:</label><input type="radio" id="idSonstigesFC" name="Flaschenform"/></p>
+		<p><label for="SonstigesF" class="listLable">Sonstiges:</label><input type="text" id="idSonstigesF" name="Flaschenform"/></p>
+		<h2>Verschlussfarbe</h2>
+		<p><label for="VGold" class="listLable">gold:</label><input type="radio" id="idVGold" name="Verschluss"/></p>
+		<p><label for="VSilber" class="listLable">silber:</label><input type="radio" id="idVSilber" name="Verschluss"/></p>
+		<p><label for="VSchwarz" class="listLable">schwarz:</label><input type="radio" id="idVSchwarz" name="Verschluss"/></p>
+		<p><label for="VEigene" class="listLable">eigene:</label><input type="radio" id="idVEigene" name="Verschluss"/></p>
+		<h2>Etiketten-Info</h2>
+		<p><label for="Etikett" class="listLable">Etikette:</label><input type="checkbox" id="idEtikett" name="Etikett"/></p>
+		<h2>Verpackung</h2>
+		<p><label for="PKarton" class="listLable">Karton:</label><input type="radio" id="idPKarton" name="Verpackung"/></p>
+		<p><label for="PGitterbox" class="listLable">Gitterbox:</label><input type="radio" id="idPGitterbox" name="Verpackung"/></p>
+		<p><label for="PHolzkiste" class="listLable">Holzkiste:</label><input type="radio" id="idPHolzkiste" name="Verpackung"/></p>
+		<p><label for="PNeuglas" class="listLable">wie Neuglas:</label><input type="radio" id="idPNeuglas" name="Verpackung"/></p>
+		<p><label for="PPalette" class="listLable">Palette mit Rahmen:</label><input type="radio" id="idPPalette" name="Verpackung"/></p>
+		<h2>Sonstiges</h2>
+		<p><label for="Bemerkung" class="listLable">Sonstiges:</label><input type="text" id="idBemerkung" name="Bemerkung"/></p>
+		
+		
+
+		<p><input type="submit" value="Speichern">
+
+	</form>
+
+	
+
+</div>
+
+<div id="navigation">
+
+	<a href="list.html" class="icon" id="list">Neu</a>
+
+    <a href="auftrag.html" class="icon" id="auftrag">Aufträge</a>
+
+    <a href="more.html" class="icon" id="more">Mehr</a>
+
+</div>
+
+</body>
+
+</html>
